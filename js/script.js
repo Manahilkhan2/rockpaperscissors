@@ -1,3 +1,5 @@
+let userscore=0;
+let computerscore=0;
 $(".play").click(function() {
   let userInput = $(".input").val();
   $(".userChoice").text(userInput);
@@ -22,14 +24,14 @@ $(".play").click(function() {
   let computerwinswithrock=computerChoice === "rock" && userInput !== "paper";
   let computerwinswithpaper=
       computerChoice=== "paper"&& userInput !== "scissors";
-  let computerwinsscissors=
+  let computerwinswithscissors=
       computerChoice==="scissors" && userInput !== "rock";
   
   if (computerChoice=== userInput) { 
     winner= "tie";
   } else if (
-    computerwinswithrock |
-    computerwinswithpaper |
+    computerwinswithrock ||
+    computerwinswithpaper ||
     computerwinswithscissors 
   ) {
     winner= "Computer wins "
@@ -44,8 +46,15 @@ $(".play").click(function() {
   $ ("userscore").text ($(userscore) );
 });
 function getrandomchoice () {
-  let randomchoice;
+  let randomChoice;
   randomChoice = Math.random() * 3; 
   randomChoice = Math.ceil (randomChoice);
   return randomChoice;
 }
+function chooseWinner () {
+  let chooseWinner;
+  chooseWinner= Math.random() * 3; 
+  chooseWinner= Math.ceil (chooseWinner;
+  return chooseWinner;
+}
+
